@@ -16,8 +16,8 @@ A Fluent Binary Converter to Convert between ArrayBuffer with number
 ```ts
 import { BinaryDecoder, BinaryEncoder } from "fluent-binary-converter";
 
-const uint8Array1 = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
-const binaryDecoder = new BinaryDecoder(uint8Array1.buffer);
+const source = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
+const binaryDecoder = new BinaryDecoder(source.buffer);
 
 const a = binaryDecoder.getUint32(); // 67305985
 const b = binaryDecoder.getUint32(); // 134678021
@@ -25,8 +25,8 @@ const b = binaryDecoder.getUint32(); // 134678021
 const aBinary = BinaryEncoder.fromUint32(a); // [1, 2, 3, 4]
 const bBinary = BinaryEncoder.fromUint32(b); // [5, 6, 7, 8]
 
-const uint8Array2 = new Uint8Array(8); // [0, 0, 0, 0, 0, 0, 0, 0]
-new BinaryEncoder(uint8Array2).setBinary(aBinary, bBinary);// [1, 2, 3, 4, 5, 6, 7, 8]
+const target = new Uint8Array(8); // [0, 0, 0, 0, 0, 0, 0, 0]
+new BinaryEncoder(target).setBinary(aBinary, bBinary);// [1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
 #### dependencies

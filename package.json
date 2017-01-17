@@ -23,6 +23,6 @@
     "@types/node": "7.0.0",
     "jasmine": "2.5.3",
     "tslint": "4.3.1",
-    "typescript": "2.1.4"
+    "typescript": "2.1.5"
   }
 }
