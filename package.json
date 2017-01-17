@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "tslint \"index.ts\"",
-    "test": "tsc && jasmine"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
