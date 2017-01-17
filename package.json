@@ -1,0 +1,28 @@
+{
+  "name": "fluent-binary-converter",
+  "version": "1.0.0",
+  "description": "A Fluent Binary Converter to Convert between ArrayBuffer with number",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint \"index.ts\"",
+    "test": "tsc && jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plantain-00/fluent-binary-converter.git"
+  },
+  "author": "York Yao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plantain-00/fluent-binary-converter/issues"
+  },
+  "homepage": "https://github.com/plantain-00/fluent-binary-converter#readme",
+  "devDependencies": {
+    "@types/jasmine": "2.5.40",
+    "@types/node": "7.0.0",
+    "jasmine": "2.5.3",
+    "tslint": "4.3.1",
+    "typescript": "2.1.4"
+  }
+}
