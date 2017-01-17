@@ -3,3 +3,4 @@ tslint.json
 .travis.yml
 tsconfig.json
 index.ts
+spec
