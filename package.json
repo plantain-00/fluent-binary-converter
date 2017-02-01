@@ -19,10 +19,10 @@
   },
   "homepage": "https://github.com/plantain-00/fluent-binary-converter#readme",
   "devDependencies": {
-    "@types/jasmine": "2.5.40",
-    "@types/node": "7.0.0",
+    "@types/jasmine": "2.5.41",
+    "@types/node": "7.0.4",
     "jasmine": "2.5.3",
-    "tslint": "4.3.1",
+    "tslint": "4.4.2",
     "typescript": "2.1.5"
   }
 }
