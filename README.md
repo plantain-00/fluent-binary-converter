@@ -14,7 +14,15 @@ A Fluent Binary Converter to Convert between ArrayBuffer with number
 #### usage
 
 ```ts
-import { BinaryDecoder, BinaryEncoder } from "fluent-binary-converter";
+// nodejs:
+import { BinaryDecoder, BinaryEncoder } from "fluent-binary-converter/nodejs";
+
+// browser module:
+import { BinaryDecoder, BinaryEncoder } from "fluent-binary-converter/browser";
+
+// browser script tag:
+// <script src="fluent-binary-converter/fluent-binary-converter.min.js"></script>
+// const { BinaryDecoder, BinaryEncoder } = FluentBinaryConverter;
 
 const source = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
 const binaryDecoder = new BinaryDecoder(source.buffer);
@@ -32,3 +40,14 @@ new BinaryEncoder(target).setBinary(aBinary, bBinary);// [1, 2, 3, 4, 5, 6, 7, 8
 #### dependencies
 
 + TypedArray, or polyfill like `core-js`
+
+#### change logs
+
+```ts
+// v2
+import { BinaryDecoder, BinaryEncoder } from "fluent-binary-converter/browser";
+import { BinaryDecoder, BinaryEncoder } from "fluent-binary-converter/nodejs";
+
+// v1
+import { BinaryDecoder, BinaryEncoder } from "fluent-binary-converter";
+```

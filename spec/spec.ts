@@ -1,8 +1,8 @@
-import { BinaryDecoder, BinaryEncoder } from "../index";
+import { BinaryDecoder, BinaryEncoder } from "../dist/nodejs";
 
 it("", () => {
     const uint8Array1 = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
-    const binaryDecoder = new BinaryDecoder(uint8Array1.buffer);
+    const binaryDecoder = new BinaryDecoder(uint8Array1.buffer as ArrayBuffer);
 
     const a = binaryDecoder.getUint32();
     expect(a).toEqual(67305985);

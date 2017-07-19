@@ -1,0 +1,24 @@
+<script src="../dist/fluent-binary-converter.min.js"></script>
+<script>
+    const { BinaryDecoder, BinaryEncoder } = FluentBinaryConverter;
+
+    const uint8Array1 = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
+    const binaryDecoder = new BinaryDecoder(uint8Array1.buffer);
+
+    const a = binaryDecoder.getUint32();
+    console.log(a);
+
+    const b = binaryDecoder.getUint32();
+    console.log(b);
+
+    const aBinary = BinaryEncoder.fromUint32(a);
+    console.log(aBinary);
+
+    const bBinary = BinaryEncoder.fromUint32(b);
+    console.log(bBinary);
+
+    const uint8Array2 = new Uint8Array(8);
+    const binaryEncoder = new BinaryEncoder(uint8Array2);
+    binaryEncoder.setBinary(aBinary, bBinary);
+    console.log(uint8Array2);
+</script>
