@@ -1,3 +1,6 @@
+/**
+ * @public
+ */
 export class BinaryDecoder {
     public dataView: DataView;
     constructor(public arrayBuffer: ArrayBuffer, public index = 0) {
@@ -60,6 +63,9 @@ export class BinaryDecoder {
     }
 }
 
+/**
+ * @public
+ */
 export class BinaryEncoder {
     static fromInt8(...values: number[]) {
         return new Uint8Array(new Int8Array(values).buffer);
