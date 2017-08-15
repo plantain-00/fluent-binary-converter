@@ -2,7 +2,7 @@
  * @public
  */
 export class BinaryDecoder {
-    public dataView: DataView;
+    dataView: DataView;
     constructor(public arrayBuffer: ArrayBuffer, public index = 0) {
         this.dataView = new DataView(arrayBuffer);
     }
@@ -90,7 +90,7 @@ export class BinaryEncoder {
     static fromFloat64(...values: number[]) {
         return new Uint8Array(new Float64Array(values).buffer);
     }
-    public index = 0;
+    index = 0;
     constructor(public uint8Array: Uint8Array) { }
     setBinary(...uint8Arrays: Uint8Array[]) {
         for (const uint8Array of uint8Arrays) {
