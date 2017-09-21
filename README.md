@@ -45,6 +45,16 @@ new BinaryEncoder(target).setBinary(aBinary, bBinary);// [1, 2, 3, 4, 5, 6, 7, 8
 #### change logs
 
 ```ts
+// v4
+const uint8Array2 = BinaryEncoder.concat(aBinary, bBinary, cBinary);
+
+// v3
+const uint8Array2 = new Uint8Array(aBinary.length + bBinary.length + cBinary.length);
+const binaryEncoder = new BinaryEncoder(uint8Array2);
+binaryEncoder.setBinary(aBinary, bBinary, cBinary);
+```
+
+```ts
 // v3
 BinaryEncoder.fromUint32(true, 123);
 

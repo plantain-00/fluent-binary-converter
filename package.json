@@ -1,6 +1,6 @@
 {
   "name": "fluent-binary-converter",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "description": "A Fluent Binary Converter to Convert between ArrayBuffer with number",
   "main": "index.js",
   "scripts": {

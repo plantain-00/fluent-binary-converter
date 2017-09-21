@@ -22,8 +22,6 @@ it("", () => {
     const cBinary = BinaryEncoder.fromString("www");
     expect(cBinary).toEqual(new Uint8Array([119, 119, 119]));
 
-    const uint8Array2 = new Uint8Array(11);
-    const binaryEncoder = new BinaryEncoder(uint8Array2);
-    binaryEncoder.setBinary(aBinary, bBinary, cBinary);
+    const uint8Array2 = BinaryEncoder.concat(aBinary, bBinary, cBinary);
     expect(uint8Array2).toEqual(new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 119, 119, 119]));
 });
