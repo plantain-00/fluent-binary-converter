@@ -50,6 +50,12 @@ export class BinaryDecoder {
         return result;
     }
 
+    public getString(length?: number) {
+        const binary = this.getBinary(length);
+        const array = [].slice.call(binary);
+        return String.fromCharCode(...array);
+    }
+
     public getBinary(length?: number) {
         if (length === undefined) {
             const result = new Uint8Array(this.arrayBuffer, this.index);
@@ -92,6 +98,14 @@ export class BinaryEncoder {
     }
     private index = 0;
     constructor(public uint8Array: Uint8Array) { }
+    public setString(unicode: string) {
+        const uint8Array = new Uint8Array(unicode.length);
+        for (let i = 0; i < unicode.length; i++) {
+            uint8Array[i] = unicode.charCodeAt(i);
+        }
+        this.uint8Array.set(uint8Array, this.index);
+        this.index += uint8Array.length;
+    }
     public setBinary(...uint8Arrays: Uint8Array[]) {
         for (const uint8Array of uint8Arrays) {
             this.uint8Array.set(uint8Array, this.index);
