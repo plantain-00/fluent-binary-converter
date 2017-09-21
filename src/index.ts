@@ -126,16 +126,15 @@ export class BinaryEncoder {
         }
         return new Uint8Array(dataView.buffer);
     }
-    private index = 0;
-    constructor(public uint8Array: Uint8Array) { }
-    public setString(unicode: string) {
+    public static fromString(unicode: string) {
         const uint8Array = new Uint8Array(unicode.length);
         for (let i = 0; i < unicode.length; i++) {
             uint8Array[i] = unicode.charCodeAt(i);
         }
-        this.uint8Array.set(uint8Array, this.index);
-        this.index += uint8Array.length;
+        return uint8Array;
     }
+    private index = 0;
+    constructor(public uint8Array: Uint8Array) { }
     public setBinary(...uint8Arrays: Uint8Array[]) {
         for (const uint8Array of uint8Arrays) {
             this.uint8Array.set(uint8Array, this.index);
