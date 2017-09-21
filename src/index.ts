@@ -76,6 +76,9 @@ export class BinaryEncoder {
     public static fromInt8(...values: number[]) {
         return new Uint8Array(new Int8Array(values).buffer);
     }
+    public static fromUint8(...values: number[]) {
+        return new Uint8Array(values);
+    }
 
     public static fromInt16(littleEndian: boolean, ...values: number[]) {
         const offset = 2;
