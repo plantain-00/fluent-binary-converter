@@ -18,34 +18,34 @@ export class BinaryDecoder {
         return result;
     }
 
-    public getInt16() {
-        const result = this.dataView.getInt16(this.index, true);
+    public getInt16(littleEndian = true) {
+        const result = this.dataView.getInt16(this.index, littleEndian);
         this.index += 2;
         return result;
     }
-    public getUint16() {
-        const result = this.dataView.getUint16(this.index, true);
+    public getUint16(littleEndian = true) {
+        const result = this.dataView.getUint16(this.index, littleEndian);
         this.index += 2;
         return result;
     }
 
-    public getInt32() {
-        const result = this.dataView.getInt32(this.index, true);
+    public getInt32(littleEndian = true) {
+        const result = this.dataView.getInt32(this.index, littleEndian);
         this.index += 4;
         return result;
     }
-    public getUint32() {
-        const result = this.dataView.getUint32(this.index, true);
+    public getUint32(littleEndian = true) {
+        const result = this.dataView.getUint32(this.index, littleEndian);
         this.index += 4;
         return result;
     }
-    public getFloat32() {
-        const result = this.dataView.getFloat32(this.index, true);
+    public getFloat32(littleEndian = true) {
+        const result = this.dataView.getFloat32(this.index, littleEndian);
         this.index += 4;
         return result;
     }
-    public getFloat64() {
-        const result = this.dataView.getFloat64(this.index, true);
+    public getFloat64(littleEndian = true) {
+        const result = this.dataView.getFloat64(this.index, littleEndian);
         this.index += 8;
         return result;
     }
