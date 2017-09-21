@@ -45,6 +45,14 @@ new BinaryEncoder(target).setBinary(aBinary, bBinary);// [1, 2, 3, 4, 5, 6, 7, 8
 #### change logs
 
 ```ts
+// v3
+BinaryEncoder.fromUint32(true, 123);
+
+// v2
+BinaryEncoder.fromUint32(123);
+```
+
+```ts
 // v2
 import { BinaryDecoder, BinaryEncoder } from "fluent-binary-converter/browser";
 import { BinaryDecoder, BinaryEncoder } from "fluent-binary-converter/nodejs";

@@ -77,24 +77,54 @@ export class BinaryEncoder {
         return new Uint8Array(new Int8Array(values).buffer);
     }
 
-    public static fromInt16(...values: number[]) {
-        return new Uint8Array(new Int16Array(values).buffer);
+    public static fromInt16(littleEndian: boolean, ...values: number[]) {
+        const offset = 2;
+        const dataView = new DataView(new Uint8Array(values.length * offset).buffer);
+        for (let i = 0; i < values.length; i++) {
+            dataView.setInt16(i * offset, values[i], littleEndian);
+        }
+        return new Uint8Array(dataView.buffer);
     }
-    public static fromUint16(...values: number[]) {
-        return new Uint8Array(new Uint16Array(values).buffer);
+    public static fromUint16(littleEndian: boolean, ...values: number[]) {
+        const offset = 2;
+        const dataView = new DataView(new Uint8Array(values.length * offset).buffer);
+        for (let i = 0; i < values.length; i++) {
+            dataView.setUint16(i * offset, values[i], littleEndian);
+        }
+        return new Uint8Array(dataView.buffer);
     }
 
-    public static fromInt32(...values: number[]) {
-        return new Uint8Array(new Int32Array(values).buffer);
+    public static fromInt32(littleEndian: boolean, ...values: number[]) {
+        const offset = 4;
+        const dataView = new DataView(new Uint8Array(values.length * offset).buffer);
+        for (let i = 0; i < values.length; i++) {
+            dataView.setInt32(i * offset, values[i], littleEndian);
+        }
+        return new Uint8Array(dataView.buffer);
     }
-    public static fromUint32(...values: number[]) {
-        return new Uint8Array(new Uint32Array(values).buffer);
+    public static fromUint32(littleEndian: boolean, ...values: number[]) {
+        const offset = 4;
+        const dataView = new DataView(new Uint8Array(values.length * offset).buffer);
+        for (let i = 0; i < values.length; i++) {
+            dataView.setUint32(i * offset, values[i], littleEndian);
+        }
+        return new Uint8Array(dataView.buffer);
     }
-    public static fromFloat32(...values: number[]) {
-        return new Uint8Array(new Float32Array(values).buffer);
+    public static fromFloat32(littleEndian: boolean, ...values: number[]) {
+        const offset = 4;
+        const dataView = new DataView(new Uint8Array(values.length * offset).buffer);
+        for (let i = 0; i < values.length; i++) {
+            dataView.setFloat32(i * offset, values[i], littleEndian);
+        }
+        return new Uint8Array(dataView.buffer);
     }
-    public static fromFloat64(...values: number[]) {
-        return new Uint8Array(new Float64Array(values).buffer);
+    public static fromFloat64(littleEndian: boolean, ...values: number[]) {
+        const offset = 8;
+        const dataView = new DataView(new Uint8Array(values.length * offset).buffer);
+        for (let i = 0; i < values.length; i++) {
+            dataView.setFloat64(i * offset, values[i], littleEndian);
+        }
+        return new Uint8Array(dataView.buffer);
     }
     private index = 0;
     constructor(public uint8Array: Uint8Array) { }

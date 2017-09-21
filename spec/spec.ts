@@ -13,10 +13,10 @@ it("", () => {
     const c = binaryDecoder.getString(3);
     expect(c).toEqual("www");
 
-    const aBinary = BinaryEncoder.fromUint32(a);
+    const aBinary = BinaryEncoder.fromUint32(true, a);
     expect(aBinary).toEqual(new Uint8Array([1, 2, 3, 4]));
 
-    const bBinary = BinaryEncoder.fromUint32(b);
+    const bBinary = BinaryEncoder.fromUint32(true, b);
     expect(bBinary).toEqual(new Uint8Array([5, 6, 7, 8]));
 
     const uint8Array2 = new Uint8Array(11);
