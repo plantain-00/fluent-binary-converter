@@ -16,10 +16,12 @@ A Fluent Binary Converter to Convert between ArrayBuffer with number
 
 ```ts
 // nodejs:
-import { BinaryDecoder, BinaryEncoder } from "fluent-binary-converter/nodejs";
+import { BinaryDecoder, BinaryEncoder } from "fluent-binary-converter";
+// import { BinaryDecoder, BinaryEncoder } from "fluent-binary-converter/nodejs"; // ES syntax
 
 // browser module:
-import { BinaryDecoder, BinaryEncoder } from "fluent-binary-converter/browser";
+// import { BinaryDecoder, BinaryEncoder } from "fluent-binary-converter";
+// import { BinaryDecoder, BinaryEncoder } from "fluent-binary-converter/browser"; // ES module
 
 // browser script tag:
 // <script src="fluent-binary-converter/fluent-binary-converter.min.js"></script>
