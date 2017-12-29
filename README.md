@@ -1,3 +1,5 @@
+# fluent-binary-converter
+
 [![Dependency Status](https://david-dm.org/plantain-00/fluent-binary-converter.svg)](https://david-dm.org/plantain-00/fluent-binary-converter)
 [![devDependency Status](https://david-dm.org/plantain-00/fluent-binary-converter/dev-status.svg)](https://david-dm.org/plantain-00/fluent-binary-converter#info=devDependencies)
 [![Build Status: Linux](https://travis-ci.org/plantain-00/fluent-binary-converter.svg?branch=master)](https://travis-ci.org/plantain-00/fluent-binary-converter)
@@ -5,14 +7,13 @@
 [![npm version](https://badge.fury.io/js/fluent-binary-converter.svg)](https://badge.fury.io/js/fluent-binary-converter)
 [![Downloads](https://img.shields.io/npm/dm/fluent-binary-converter.svg)](https://www.npmjs.com/package/fluent-binary-converter)
 
-# fluent-binary-converter
 A Fluent Binary Converter to Convert between ArrayBuffer with number
 
-#### install
+## install
 
 `npm i fluent-binary-converter`
 
-#### usage
+## usage
 
 ```ts
 // nodejs:
@@ -40,11 +41,11 @@ const target = new Uint8Array(8); // [0, 0, 0, 0, 0, 0, 0, 0]
 new BinaryEncoder(target).setBinary(aBinary, bBinary);// [1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
-#### dependencies
+## dependencies
 
 + TypedArray, or polyfill like `core-js`
 
-#### change logs
+## change logs
 
 ```ts
 // v4
