@@ -7,6 +7,7 @@
 [![npm version](https://badge.fury.io/js/fluent-binary-converter.svg)](https://badge.fury.io/js/fluent-binary-converter)
 [![Downloads](https://img.shields.io/npm/dm/fluent-binary-converter.svg)](https://www.npmjs.com/package/fluent-binary-converter)
 [![gzip size](https://img.badgesize.io/https://unpkg.com/fluent-binary-converter?compression=gzip)](https://unpkg.com/fluent-binary-converter)
+[![type-coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fplantain-00%2Ffluent-binary-converter%2Fmaster%2Fpackage.json)](https://github.com/plantain-00/fluent-binary-converter)
 
 A Fluent Binary Converter to Convert between ArrayBuffer with number
 
