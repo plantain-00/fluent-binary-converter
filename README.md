@@ -4,6 +4,7 @@
 [![devDependency Status](https://david-dm.org/plantain-00/fluent-binary-converter/dev-status.svg)](https://david-dm.org/plantain-00/fluent-binary-converter#info=devDependencies)
 [![Build Status: Linux](https://travis-ci.org/plantain-00/fluent-binary-converter.svg?branch=master)](https://travis-ci.org/plantain-00/fluent-binary-converter)
 [![Build Status: Windows](https://ci.appveyor.com/api/projects/status/github/plantain-00/fluent-binary-converter?branch=master&svg=true)](https://ci.appveyor.com/project/plantain-00/fluent-binary-converter/branch/master)
+![Github CI](https://github.com/plantain-00/fluent-binary-converter/workflows/Github%20CI/badge.svg)
 [![npm version](https://badge.fury.io/js/fluent-binary-converter.svg)](https://badge.fury.io/js/fluent-binary-converter)
 [![Downloads](https://img.shields.io/npm/dm/fluent-binary-converter.svg)](https://www.npmjs.com/package/fluent-binary-converter)
 [![gzip size](https://img.badgesize.io/https://unpkg.com/fluent-binary-converter?compression=gzip)](https://unpkg.com/fluent-binary-converter)
